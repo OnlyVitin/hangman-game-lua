@@ -9,7 +9,7 @@ local function showDifficultyMenuHeader()
 ╔══════════════════════════════════╗
 ║      ESCOLHA A DIFICULDADE       ║
 ╚══════════════════════════════════╝
-]])
+    ]])
 end
 
 local function showDifficultyOptions(difficulties)
@@ -25,7 +25,7 @@ local function showDifficultyInstructions()
 ║[1 desc] | Ver informações da dificuldade ║
 ║[1]      | Escolher dificuldade e jogar   ║
 ╚══════════════════════════════════════════╝
-]])
+    ]])
 end
 
 function display.showDifficultyMenu(difficulties)

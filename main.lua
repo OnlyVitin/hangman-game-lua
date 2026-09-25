@@ -25,7 +25,7 @@ while keepPlaying do
         display.showHelpCommand(gameState.difficulty.allowReveal)
         print("")
         display.showCurrentMessage(gameState.currentMessage)
-
+        print("")
         print("Insira uma letra: ")
 
         local guess = io.read()
