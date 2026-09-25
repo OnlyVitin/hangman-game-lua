@@ -26,10 +26,7 @@ local function selectDifficulty()
         elseif choice and difficulties[choice] then
             return difficulties[choice]
         else
-            errorMessage = string.format(
-                '(!) Entrada inválida. Use um número de 1 a %d ou um número seguido de "desc".',
-                #difficulties
-            )
+            errorMessage = string.format('(!) Entrada inválida. Use um número de 1 a %d ou um número seguido de "desc".', #difficulties)
         end
     end
 end

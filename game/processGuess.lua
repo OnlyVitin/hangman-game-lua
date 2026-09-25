@@ -96,7 +96,7 @@ local function processGuess(guess, gameState)
     end
 
     if not isValidLetter(guess) then
-        gameState.currentMessage = "(!) Você deve digitar apenas 'uma' letra entre A-Z."
+        gameState.currentMessage = '(!) Você deve digitar apenas "uma" letra entre A-Z.'
         return
     end
 
