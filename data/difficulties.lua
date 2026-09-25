@@ -13,8 +13,8 @@ local difficulties = {
     {
         name = "Normal",
         description = "• Para quem busca por uma experiência mediana",
-        baseMistakes = 3,
-        mistakesPerLetter = 1,
+        baseMistakes = 5,
+        mistakesPerLetter = 0,
         showHint = true,
         allowReveal = true,
         showUsedLetters = true,
@@ -24,8 +24,8 @@ local difficulties = {
     {
         name = "Difícil",
         description = "• Pense bem antes de escolher essa dificuldade",
-        baseMistakes = 1,
-        mistakesPerLetter = 1,
+        baseMistakes = 4,
+        mistakesPerLetter = 0,
         showHint = false,
         allowReveal = true,
         showUsedLetters = false,
