@@ -18,23 +18,16 @@ function text.createMaskedWord(word)
 end
 
 function text.removeWhitespace(input)
-    local withoutWhitespace = input:gsub("%s+", "")
-    return withoutWhitespace
+    return input:gsub("%s+", "")
 end
 
-function text.toLowercase(input)
-    return string.lower(input)
-end
-
-function text.normalizeInput(input)
-    input = text.removeWhitespace(input)
-    input = text.toLowercase(input)
-
-    return input
+function text.normalizeText(value)
+    local valueWithoutSpace = text.removeWhitespace(value)
+    return valueWithoutSpace:lower()
 end
 
 function text.parseDescriptionCommand(input)
-    input = text.normalizeInput(input)
+    input = text.normalizeText(input)
 
     local choice = input:match("^(%d+)desc$")
 

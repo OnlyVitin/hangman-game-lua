@@ -5,7 +5,7 @@ local function askPlayAgain()
         print("")
         print("Deseja jogar novamente? [s/n]")
 
-        local answer = text.normalizeInput(io.read())
+        local answer = text.normalizeText(io.read())
 
         if answer == "s" then
             return true

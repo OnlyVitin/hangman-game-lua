@@ -21,9 +21,10 @@ while keepPlaying do
 
         print("Insira uma letra: ")
 
-        local guess = text.normalizeInput(io.read())
+        local guess = io.read()
+        local normalizedGuess = text.normalizeText(guess)
 
-        processGuess(guess, gameState)
+        processGuess(normalizedGuess, gameState)
     end
 
     terminal.clear()

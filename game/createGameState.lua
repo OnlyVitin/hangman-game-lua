@@ -6,7 +6,8 @@ local function createGameState()
     local difficulty = selectDifficulty()
     local randomIndex = math.random(1, #words)
     local selectedWord = words[randomIndex]
-    local word = text.toLowercase(selectedWord.word)
+    local word = selectedWord.word:lower()
+    local maxMistakes = difficulty.baseMistakes + (#word * difficulty.mistakesPerLetter)
 
     local gameState = {
         word = word,
@@ -17,10 +18,9 @@ local function createGameState()
         mistakes = 0,
         score = 0,
         currentMessage = nil,
-        difficulty = difficulty
+        difficulty = difficulty,
+        maxMistakes = maxMistakes
     }
-
-    gameState.maxMistakes = difficulty.baseMistakes + (#word * difficulty.mistakesPerLetter)
 
     return gameState
 end
