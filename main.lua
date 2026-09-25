@@ -17,7 +17,14 @@ while keepPlaying do
     while gameState.word ~= table.concat(gameState.maskedWord) and gameState.mistakes < gameState.maxMistakes do
         terminal.clear()
 
-        display.showGameScreen(gameState)
+        display.showHangman(gameState.maskedWord, gameState.mistakes, gameState.maxMistakes)
+        display.showUsedLetters(gameState.guessHistory, gameState.difficulty.showUsedLetters)
+        display.showMistakes(gameState.mistakes, gameState.maxMistakes)
+        display.showScore(gameState.score)
+        display.showHint(gameState.hint, gameState.difficulty.showHint)
+        display.showHelpCommand(gameState.difficulty.allowReveal)
+        print("")
+        display.showCurrentMessage(gameState.currentMessage)
 
         print("Insira uma letra: ")
 
@@ -29,7 +36,10 @@ while keepPlaying do
 
     terminal.clear()
 
-    display.showFinalScreen(gameState)
+    display.showHangman(gameState.maskedWord, gameState.mistakes, gameState.maxMistakes)
+    display.showMistakes(gameState.mistakes, gameState.maxMistakes)
+    display.showFinalScore(gameState.score)
+    display.showResult(gameState.word, gameState.maskedWord, gameState.mistakes, gameState.maxMistakes)
 
     keepPlaying = askPlayAgain()
 end

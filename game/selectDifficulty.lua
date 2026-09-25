@@ -8,13 +8,15 @@ local function selectDifficulty()
 
     while true do
         terminal.clear()
-        display.showDifficultyMenu(difficulties, errorMessage)
+        display.showDifficultyMenu(difficulties)
+        display.showErrorMessage(errorMessage)
 
         local input = io.read()
         local descriptionIndex = text.parseDescriptionCommand(input)
         local choice = tonumber(text.removeWhitespace(input))
 
         if descriptionIndex and difficulties[descriptionIndex] then
+            errorMessage = nil
             terminal.clear()
             display.showDifficultyInfo(difficulties[descriptionIndex])
 
@@ -24,7 +26,10 @@ local function selectDifficulty()
         elseif choice and difficulties[choice] then
             return difficulties[choice]
         else
-            errorMessage = "(!) Entrada inválida. Tente novamente."
+            errorMessage = string.format(
+                '(!) Entrada inválida. Use um número de 1 a %d ou um número seguido de "desc".',
+                #difficulties
+            )
         end
     end
 end

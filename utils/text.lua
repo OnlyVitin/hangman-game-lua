@@ -18,7 +18,8 @@ function text.createMaskedWord(word)
 end
 
 function text.removeWhitespace(input)
-    return input:gsub("%s+", "")
+    local valueWithoutWhitespace = input:gsub("%s+", "")
+    return valueWithoutWhitespace
 end
 
 function text.normalizeText(value)
