@@ -12,10 +12,10 @@ Jogo da forca desenvolvido em Lua, com sistema de dificuldades, pontuação, dic
 
 ## Como jogar
 
+- Escolha uma dificuldade antes de começar.
 - Digite uma letra para tentar acertar a palavra.
 - Digite `help` para revelar uma letra aleatória.
 - O comando `help` adiciona erros à partida.
-- Escolha uma dificuldade antes de começar.
 - Ao final, escolha se deseja jogar novamente.
 
 ## Dificuldades
