@@ -4,7 +4,7 @@ Jogo da forca desenvolvido em Lua, com sistema de dificuldades, pontuação, dic
 
 ## Preview
 
-![Hangman Game](https://i.imgur.com/ClQ9HVa.png)
+![Hangman Game](https://i.imgur.com/Rd2JSxh.png)
 
 ## Requisitos
 
